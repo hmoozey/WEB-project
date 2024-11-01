@@ -1,4 +1,4 @@
-﻿/* Resetting margin and padding for a clean start */
+/* Resetting margin and padding for a clean start */
 * {
     margin: 0;
     padding: 0;
@@ -120,6 +120,7 @@ nav ul {
 
     nav ul li {
         margin-left: 1rem;
+        padding: 5px 0px;
     }
 
         nav ul li a {
@@ -128,6 +129,33 @@ nav ul {
             margin-top: -10px; /* استخدام margin-top لخفض الكلمة */
             line-height: 1.5; /* للتأكد من ارتفاع السطر */
         }
+
+/* Dropdown styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #1a1a2e;
+    list-style: none;
+    padding: 0.5rem 0;
+    z-index: 1000;
+
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+
+    /* Show dropdown on hover */
+}
+
+.dropdown li {
+    display: block;
+}
+
+    .dropdown li a {
+        padding: 0.5rem 1rem;
+        /* Padding for dropdown items */
+        color: #fff;
+    }
 
 /* Hero section */
 .hero {
