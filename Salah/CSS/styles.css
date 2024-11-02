@@ -1,0 +1,244 @@
+﻿/* Resetting margin and padding for a clean start */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #000000;
+}
+
+/* Header styling */
+header {
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+    header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+
+/* Search Box Container */
+
+
+.search-box {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex: 1;
+    height: 30px;
+    font-size: 16px;
+    color: #333;
+    width: 250px;
+    border-radius: 15px;
+    padding-left: 10px; /* إضافة مسافة من الحافة اليسرى */
+}
+
+.search-container {
+    position: relative; /* مهم لتحديد موقع العناصر داخل الحاوي */
+    margin-top: -5px;
+    display: flex;
+    align-items: center;
+    background-color: #e1e8ed; /* لون مميز للخلفية */
+    border-radius: 5px 5px 5px 0px;
+    padding: 0px 0px;
+    width: 90%;
+}
+
+
+
+button {
+    background-color: #FEBD69;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 0px 5px 5px 0px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+    button .fa-solid {
+        width: 25px;
+        color: #555;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+.search-box::placeholder {
+    color: #aaa;
+}
+
+
+.result-box {
+    position: absolute;
+    left: 118px; /* محاذاة مع بداية .search-box */
+    background-color: #E1E8ED;
+    border: 1px solid #ccc;
+    border-radius: 0px 0px 5px 5px;
+    margin-top: -3px;
+    width: calc(85% - 200px); /* عرض يتطابق مع .search-box */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    overflow-x: auto;
+    display: none;
+}
+
+.result-box ul {
+    border-top: 1px solid #999;
+    padding: 5px 0px;
+}
+
+.result-box ul li{
+    list-style: none;
+    border-radius: 3px;
+    padding: 9px 6.5px;
+    cursor: pointer;
+}
+
+.result-box ul li:hover{
+   background: #e9f3ff; 
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    nav ul li {
+        margin-left: 1rem;
+        padding: 5px 0px;
+    }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            margin-top: -10px; /* استخدام margin-top لخفض الكلمة */
+            line-height: 1.5; /* للتأكد من ارتفاع السطر */
+        }
+
+/* Dropdown styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #1a1a2e;
+    list-style: none;
+    padding: 0.5rem 0;
+    z-index: 1000;
+
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+
+    /* Show dropdown on hover */
+}
+
+.dropdown li {
+    display: block;
+}
+
+    .dropdown li a {
+        padding: 0.5rem 1rem;
+        /* Padding for dropdown items */
+        color: #fff;
+    }
+
+/* Hero section */
+.hero {
+    background-color: #789796;
+    color: #ffffff;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+/* Featured products */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-card h3 {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+
+    .product-card p {
+        color: #666;
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+
+    .product-card button {
+        background-color: #00b4d8;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        margin: 1rem 0;
+        cursor: pointer;
+    }
+
+/* Footer */
+footer {
+    background-color: #1a1a2e;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+    footer p {
+        font-size: 12px;
+        margin-bottom: 1rem;
+    }
+
+    footer ul {
+        list-style: none;
+        display: inline-flex;
+        gap: 10px;
+    }
+
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+
+        }
+
