@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/ico/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/ico/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="../images/ico/favicon-32x32.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="../images/ico/apple-touch-icon.png">
+    <link rel="icon" href="../images/ico/android-chrome-192x192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="../images/ico/android-chrome-512x512.png" sizes="512x512" type="image/png">
+    <title>Login - ElectroMart</title>
+    <link rel="stylesheet" href="../CSS/loginstyles.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html">
+                <img src="../images/logo.png" alt="Small Image" width="100" height="50" />
+            </a>
+        </h1>
+    </header>
+
+
+
+    <div class="login-container">
+        <h2>Login to ElectroMart</h2>
+        <form action="submit_login.php" method="post">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <button onclick="window.location.href='signup.html'" class="signup-btn">Signup</button>
+    </div>
+    <img src="../images/login.png" alt="Small Image"  width="400" height="400" style="margin-bottom: -15px; margin-left: 90px" />
+
+</body>
+</html>
