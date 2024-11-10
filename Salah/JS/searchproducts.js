@@ -137,12 +137,15 @@ document.addEventListener("DOMContentLoaded", function () {
             productCard.classList.add('product-card');
             productCard.innerHTML = `
                 <a href="../html/product.html?id=${product.id}" class="card-link">
+                    <div class="content-wrapper">
+
                     <img src="${product.image}" alt="${product.name}">
                     <h3>${product.name}</h3>
                     <p>${product.description}</p>
                     <p class="brand">${product.brand}</p>
                     <p class="price">${product.price}$</p>
                 </a>
+                </div>
                 <button class="add-to-carts">Add to Cart</button>
             `;
             productContainer.appendChild(productCard);

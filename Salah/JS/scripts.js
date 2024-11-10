@@ -310,3 +310,30 @@
         });
     }
 });
+
+
+function setTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+}
+
+function initTheme() {
+    const savedTheme = localStorage.getItem("theme");
+
+    const theme = savedTheme || (prefersDark ? "light" : "dark");
+
+    // ضبط حالة الزر بناءً على الثيم
+    document.getElementById("theme-toggle").checked = (theme === "light");
+
+    // تطبيق الثيم
+    setTheme(theme);
+}
+
+document.getElementById("theme-toggle").addEventListener("change", () => {
+    const newTheme = document.getElementById("theme-toggle").checked ? "light" : "dark" ;
+    setTheme(newTheme);
+});
+
+
+initTheme();
+
