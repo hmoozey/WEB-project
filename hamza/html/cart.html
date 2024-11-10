@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/cart.css">
+    <script src="../JS/header.js"></script>
+    <script src="../JS/footer.js"></script>
+    <script src="https://kit.fontawesome.com/947ffa6964.js" crossorigin="anonymous"></script>
+</head>
+<header><!-- Header --></header>
+
+<body>
+
+
+    <div class="shopping-cart">
+        <!-- Title -->
+        <div class="title">
+            Shopping Bag
+        </div>
+
+        <!-- Product #1 -->
+        <div class="item">
+            <div class="buttons">
+                <span class="delete-btn"></span>
+                <span class="like-btn"></span>
+            </div>
+
+            <div class="image">
+                <img src="item-1.png" alt="" />
+            </div>
+
+            <div class="description">
+                <span>Common Projects</span>
+                <span>Bball High</span>
+                <span>White</span>
+            </div>
+
+            <div class="quantity">
+                <button class="plus-btn" type="button" onclick="changeQuantity(this, 1)">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <input type="text" class="quantity-input" value="1">
+                <button class="minus-btn" type="button" onclick="changeQuantity(this, -1)">
+                    <i class="fa-solid fa-minus"></i>
+                </button>
+            </div>
+
+            <div class="total-price">$549</div>
+        </div>
+
+        <!-- Product #2 -->
+        <div class="item">
+            <div class="buttons">
+                <span class="delete-btn"></span>
+                <span class="like-btn"></span>
+            </div>
+
+            <div class="image">
+                <img src="item-2.png" alt="" />
+            </div>
+
+            <div class="description">
+                <span>Maison Margiela</span>
+                <span>Future Sneakers</span>
+                <span>White</span>
+            </div>
+
+            <div class="quantity">
+                <button class="plus-btn" type="button" onclick="changeQuantity(this, 1)">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <input type="text" class="quantity-input" value="1">
+                <button class="minus-btn" type="button" onclick="changeQuantity(this, -1)">
+                    <i class="fa-solid fa-minus"></i>
+                </button>
+            </div>
+
+            <div class="total-price">$870</div>
+        </div>
+
+        <!-- Product #3 -->
+        <div class="item">
+            <div class="buttons">
+                <span class="delete-btn"></span>
+                <span class="like-btn"></span>
+            </div>
+
+            <div class="image">
+                <img src="item-3.png" alt="" />
+            </div>
+
+            <div class="description">
+                <span>Our Legacy</span>
+                <span>Brushed Scarf</span>
+                <span>Brown</span>
+            </div>
+
+            <div class="quantity">
+                <button class="plus-btn" type="button" onclick="changeQuantity(this, 1)">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <input type="text" class="quantity-input" value="1">
+                <button class="minus-btn" type="button" onclick="changeQuantity(this, -1)">
+                    <i class="fa-solid fa-minus"></i>
+                </button>
+            </div>
+
+            <div class="total-price">$349</div>
+        </div>
+    </div>
+    <div class="cart-checkout">
+        <button class="button button1">CheckOut</button>
+
+    </div>
+
+</body>
+<footer><!-- Footer --></footer>
+
+</html>
+
+<script>
+    fetch('./header.html').then(response => response.text()).then(data => {
+        document.querySelector('header').innerHTML = data;
+    });
+    fetch('./footer.html').then(response => response.text()).then(data => {
+        document.querySelector('footer').innerHTML = data;
+    });
+
+    function changeQuantity(button, delta) {
+        // Find the input element next to the button clicked
+        let quantityInput = button.parentNode.querySelector('.quantity-input');
+        let currentValue = parseInt(quantityInput.value);
+
+        // Ensure currentValue is a valid integer
+        if (!isNaN(currentValue)) {
+            let newValue = currentValue + delta;
+            quantityInput.value = newValue > 1 ? newValue : 1; // Ensure it doesn't go below 1
+        } else {
+            quantityInput.value = 1; // Reset to 1 if input is invalid
+        }
+    }
+</script>
