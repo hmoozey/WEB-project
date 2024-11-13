@@ -1,0 +1,92 @@
+
+
+
+/* Product container styling */
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    max-height: 900px;
+    background-color: var(--product-bg-color);
+    box-shadow: 0 2px 5px var(--product-shadow-color);
+}
+
+[data-theme="dark"] .product-container {
+    background-color: rgba(50, 50, 50, 52); /* خلفية داكنة شفافة لتخفيف الدمج */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.product-image img {
+    width: 600px;
+    height: 600px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    border-radius: 5px;
+    mix-blend-mode: multiply;
+}
+
+.product-image img {
+    mix-blend-mode: multiply; /* تأثير الدمج */
+    opacity: 1; /* تقليل الشفافية لتخفيف تأثير الدمج */
+}
+
+/* تخصيص إعدادات الثيم الداكن */
+[data-theme="dark"] .product-image img {
+    mix-blend-mode: normal; /* إزالة تأثير الدمج عند تطبيق الثيم الداكن */
+    opacity: 100; /* زيادة الشفافية في الثيم الداكن لتخفيف التأثير */
+}
+
+
+.product-info {
+    margin-left: 20px;
+}
+
+    .product-info h1 {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .product-info .price {
+        color: #b12704;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .product-info ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .product-info ul li {
+            background: #eaeaea;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+
+
+/* ضبط حجم النص لتنسيق الثيم الداكن */
+[data-theme="dark"] .product-info ul li {
+    background: var(--result-bg-color);
+}
+
+.add-to-cart, .back-to-products {
+    padding: 10px 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 15px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+    .add-to-cart:hover, .back-to-products:hover {
+        background-color: #218838;
+    }

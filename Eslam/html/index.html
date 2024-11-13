@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/ico/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/ico/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="../images/ico/favicon-32x32.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="../images/ico/apple-touch-icon.png">
+    <link rel="icon" href="../images/ico/android-chrome-192x192.png" sizes="192x192" type="png">
+    <link rel="icon" href="../images/ico/android-chrome-512x512.png" sizes="512x512" type="png">
+
+    <title>ElectroMart</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/All.css">
+
+
+    <script src="https://kit.fontawesome.com/947ffa6964.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>
+            <a href="index.html">
+                <img src="../images/logo.png" alt="Small Image" width="100" height="50" style="margin-bottom: -15px" class="image-icon" />
+            </a>
+        </h1>
+        <div class="search-box">
+            <div class="search-container">
+                <div id="product-item">
+                    <a id="product-link">All</a>
+                    <ul class="dropdown">
+                        <li class="radio-input">
+                            <label class="label">
+                                <input type="radio"
+                                       id="value-1"
+                                       checked=""
+                                       name="value-radio"
+                                       value="value-1"
+                                       onclick="selectCategory(this)" />
+                                <span class="text">All</span>
+                            </label>
+                            <label class="label">
+                                <input type="radio" id="value-2" name="value-radio" value="value-2" onclick="selectCategory(this)" />
+                                <span class="text">Phones</span>
+                            </label>
+                            <label class="label">
+                                <input type="radio" id="value-3" name="value-radio" value="value-3" onclick="selectCategory(this)" />
+                                <span class="text">Laptop</span>
+                            </label>
+                            <label class="label">
+                                <input type="radio" id="value-4" name="value-radio" value="value-4" onclick="selectCategory(this)" />
+                                <span class="text">headphones</span>
+                            </label>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <input list="pro" name="pro" id="input-box" class="search-box" placeholder="Search..." />
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <div class="result-box">
+                </div>
+            </div>
+            
+
+        </div>
+
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle" class="input__check">
+            <span class="slider"></span>
+        </label>
+
+
+        <nav>
+            <ul>
+
+
+                <li>
+                    <a href="LogIn-SignUp.html">
+                        <i class="fa-solid fa-user" style="font-size: 25px; margin-right : 5px;"></i>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cart.html">
+                        <img src="../images/android-chrome-512x512.png" alt="Small Image" width="28" height="28" style="margin-bottom: -4px; margin-right: 10px;" class="image-icon" />
+
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Welcome to ElectroMart</h2>
+        <p>Your one-stop shop for all things electronics!</p>
+    </section>
+
+    <div id="product-container"></div>
+    <section id="product-container">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=1" class="card-link">
+                <img src="../images/61kVeIFOnFL._AC_SX466_.jpg" alt="High-End Laptop">
+                <h3>High-End Laptop</h3>
+                <p>Powerful performance and sleek design for professionals.</p>
+                <p class="brand">Brand: Lenovo</p>
+                <p class="price">$1249.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=2" class="card-link">
+                <img src="../images/Latest Smartphone.jpg" alt="Latest Smartphone">
+                <h3>Latest Smartphone</h3>
+                <p>Stay connected with style and cutting-edge features.</p>
+                <p class="brand">Brand: Samsung</p>
+                <p class="price">$1299.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=3" class="card-link">
+                <img src="../images/Wireless Headphones.jpg" alt="Wireless Headphones">
+                <h3>Wireless Headphones</h3>
+                <p>Experience sound quality like never before.</p>
+                <p class="brand">Brand: Sony</p>
+                <p class="price">$119.99</p>
+            </a>
+            
+        </div>
+        <!-- Product 1 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=1" class="card-link">
+                <img src="../images/61kVeIFOnFL._AC_SX466_.jpg" alt="High-End Laptop">
+                <h3>High-End Laptop</h3>
+                <p>Powerful performance and sleek design for professionals.</p>
+                <p class="brand">Brand: Lenovo</p>
+                <p class="price">$1249.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=2" class="card-link">
+                <img src="../images/Latest Smartphone.jpg" alt="Latest Smartphone">
+                <h3>Latest Smartphone</h3>
+                <p>Stay connected with style and cutting-edge features.</p>
+                <p class="brand">Brand: Samsung</p>
+                <p class="price">$1299.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=3" class="card-link">
+                <img src="../images/Wireless Headphones.jpg" alt="Wireless Headphones">
+                <h3>Wireless Headphones</h3>
+                <p>Experience sound quality like never before.</p>
+                <p class="brand">Brand: Sony</p>
+                <p class="price">$119.99</p>
+            </a>
+            
+        </div>
+        <!-- Product 1 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=1" class="card-link">
+                <img src="../images/61kVeIFOnFL._AC_SX466_.jpg" alt="High-End Laptop">
+                <h3>High-End Laptop</h3>
+                <p>Powerful performance and sleek design for professionals.</p>
+                <p class="brand">Brand: Lenovo</p>
+                <p class="price">$1249.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=2" class="card-link">
+                <img src="../images/Latest Smartphone.jpg" alt="Latest Smartphone">
+                <h3>Latest Smartphone</h3>
+                <p>Stay connected with style and cutting-edge features.</p>
+                <p class="brand">Brand: Samsung</p>
+                <p class="price">$1299.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=3" class="card-link">
+                <img src="../images/Wireless Headphones.jpg" alt="Wireless Headphones">
+                <h3>Wireless Headphones</h3>
+                <p>Experience sound quality like never before.</p>
+                <p class="brand">Brand: Sony</p>
+                <p class="price">$119.99</p>
+            </a>
+            
+        </div>
+        <!-- Product 1 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=1" class="card-link">
+                <img src="../images/61kVeIFOnFL._AC_SX466_.jpg" alt="High-End Laptop">
+                <h3>High-End Laptop</h3>
+                <p>Powerful performance and sleek design for professionals.</p>
+                <p class="brand">Brand: Lenovo</p>
+                <p class="price">$1249.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=2" class="card-link">
+                <img src="../images/Latest Smartphone.jpg" alt="Latest Smartphone">
+                <h3>Latest Smartphone</h3>
+                <p>Stay connected with style and cutting-edge features.</p>
+                <p class="brand">Brand: Samsung</p>
+                <p class="price">$1299.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=3" class="card-link">
+                <img src="../images/Wireless Headphones.jpg" alt="Wireless Headphones">
+                <h3>Wireless Headphones</h3>
+                <p>Experience sound quality like never before.</p>
+                <p class="brand">Brand: Sony</p>
+                <p class="price">$119.99</p>
+            </a>
+            
+        </div>
+        <!-- Product 1 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=1" class="card-link">
+                <img src="../images/61kVeIFOnFL._AC_SX466_.jpg" alt="High-End Laptop">
+                <h3>High-End Laptop</h3>
+                <p>Powerful performance and sleek design for professionals.</p>
+                <p class="brand">Brand: Lenovo</p>
+                <p class="price">$1249.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=2" class="card-link">
+                <img src="../images/Latest Smartphone.jpg" alt="Latest Smartphone">
+                <h3>Latest Smartphone</h3>
+                <p>Stay connected with style and cutting-edge features.</p>
+                <p class="brand">Brand: Samsung</p>
+                <p class="price">$1299.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=3" class="card-link">
+                <img src="../images/Wireless Headphones.jpg" alt="Wireless Headphones">
+                <h3>Wireless Headphones</h3>
+                <p>Experience sound quality like never before.</p>
+                <p class="brand">Brand: Sony</p>
+                <p class="price">$119.99</p>
+            </a>
+            
+        </div>
+        <!-- Product 1 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=1" class="card-link">
+                <img src="../images/61kVeIFOnFL._AC_SX466_.jpg" alt="High-End Laptop">
+                <h3>High-End Laptop</h3>
+                <p>Powerful performance and sleek design for professionals.</p>
+                <p class="brand">Brand: Lenovo</p>
+                <p class="price">$1249.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=2" class="card-link">
+                <img src="../images/Latest Smartphone.jpg" alt="Latest Smartphone">
+                <h3>Latest Smartphone</h3>
+                <p>Stay connected with style and cutting-edge features.</p>
+                <p class="brand">Brand: Samsung</p>
+                <p class="price">$1299.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=3" class="card-link">
+                <img src="../images/Wireless Headphones.jpg" alt="Wireless Headphones">
+                <h3>Wireless Headphones</h3>
+                <p>Experience sound quality like never before.</p>
+                <p class="brand">Brand: Sony</p>
+                <p class="price">$119.99</p>
+            </a>
+            
+        </div>
+        <!-- Product 1 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=1" class="card-link">
+                <img src="../images/61kVeIFOnFL._AC_SX466_.jpg" alt="High-End Laptop">
+                <h3>High-End Laptop</h3>
+                <p>Powerful performance and sleek design for professionals.</p>
+                <p class="brand">Brand: Lenovo</p>
+                <p class="price">$1249.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=2" class="card-link">
+                <img src="../images/Latest Smartphone.jpg" alt="Latest Smartphone">
+                <h3>Latest Smartphone</h3>
+                <p>Stay connected with style and cutting-edge features.</p>
+                <p class="brand">Brand: Samsung</p>
+                <p class="price">$1299.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=3" class="card-link">
+                <img src="../images/Wireless Headphones.jpg" alt="Wireless Headphones">
+                <h3>Wireless Headphones</h3>
+                <p>Experience sound quality like never before.</p>
+                <p class="brand">Brand: Sony</p>
+                <p class="price">$119.99</p>
+            </a>
+            
+        </div>
+        <!-- Product 1 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=1" class="card-link">
+                <img src="../images/61kVeIFOnFL._AC_SX466_.jpg" alt="High-End Laptop">
+                <h3>High-End Laptop</h3>
+                <p>Powerful performance and sleek design for professionals.</p>
+                <p class="brand">Brand: Lenovo</p>
+                <p class="price">$1249.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=2" class="card-link">
+                <img src="../images/Latest Smartphone.jpg" alt="Latest Smartphone">
+                <h3>Latest Smartphone</h3>
+                <p>Stay connected with style and cutting-edge features.</p>
+                <p class="brand">Brand: Samsung</p>
+                <p class="price">$1299.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=3" class="card-link">
+                <img src="../images/Wireless Headphones.jpg" alt="Wireless Headphones">
+                <h3>Wireless Headphones</h3>
+                <p>Experience sound quality like never before.</p>
+                <p class="brand">Brand: Sony</p>
+                <p class="price">$119.99</p>
+            </a>
+            
+        </div>
+        <!-- Product 1 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=1" class="card-link">
+                <img src="../images/61kVeIFOnFL._AC_SX466_.jpg" alt="High-End Laptop">
+                <h3>High-End Laptop</h3>
+                <p>Powerful performance and sleek design for professionals.</p>
+                <p class="brand">Brand: Lenovo</p>
+                <p class="price">$1249.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=2" class="card-link">
+                <img src="../images/Latest Smartphone.jpg" alt="Latest Smartphone">
+                <h3>Latest Smartphone</h3>
+                <p>Stay connected with style and cutting-edge features.</p>
+                <p class="brand">Brand: Samsung</p>
+                <p class="price">$1299.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=3" class="card-link">
+                <img src="../images/Wireless Headphones.jpg" alt="Wireless Headphones">
+                <h3>Wireless Headphones</h3>
+                <p>Experience sound quality like never before.</p>
+                <p class="brand">Brand: Sony</p>
+                <p class="price">$119.99</p>
+            </a>
+            
+        </div>
+        <!-- Product 1 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=1" class="card-link">
+                <img src="../images/61kVeIFOnFL._AC_SX466_.jpg" alt="High-End Laptop">
+                <h3>High-End Laptop</h3>
+                <p>Powerful performance and sleek design for professionals.</p>
+                <p class="brand">Brand: Lenovo</p>
+                <p class="price">$1249.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=2" class="card-link">
+                <img src="../images/Latest Smartphone.jpg" alt="Latest Smartphone">
+                <h3>Latest Smartphone</h3>
+                <p>Stay connected with style and cutting-edge features.</p>
+                <p class="brand">Brand: Samsung</p>
+                <p class="price">$1299.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=3" class="card-link">
+                <img src="../images/Wireless Headphones.jpg" alt="Wireless Headphones">
+                <h3>Wireless Headphones</h3>
+                <p>Experience sound quality like never before.</p>
+                <p class="brand">Brand: Sony</p>
+                <p class="price">$119.99</p>
+            </a>
+            
+        </div>
+        <!-- Product 1 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=1" class="card-link">
+                <img src="../images/61kVeIFOnFL._AC_SX466_.jpg" alt="High-End Laptop">
+                <h3>High-End Laptop</h3>
+                <p>Powerful performance and sleek design for professionals.</p>
+                <p class="brand">Brand: Lenovo</p>
+                <p class="price">$1249.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=2" class="card-link">
+                <img src="../images/Latest Smartphone.jpg" alt="Latest Smartphone">
+                <h3>Latest Smartphone</h3>
+                <p>Stay connected with style and cutting-edge features.</p>
+                <p class="brand">Brand: Samsung</p>
+                <p class="price">$1299.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=3" class="card-link">
+                <img src="../images/Wireless Headphones.jpg" alt="Wireless Headphones">
+                <h3>Wireless Headphones</h3>
+                <p>Experience sound quality like never before.</p>
+                <p class="brand">Brand: Sony</p>
+                <p class="price">$119.99</p>
+            </a>
+            
+        </div>
+        <!-- Product 1 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=1" class="card-link">
+                <img src="../images/61kVeIFOnFL._AC_SX466_.jpg" alt="High-End Laptop">
+                <h3>High-End Laptop</h3>
+                <p>Powerful performance and sleek design for professionals.</p>
+                <p class="brand">Brand: Lenovo</p>
+                <p class="price">$1249.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=2" class="card-link">
+                <img src="../images/Latest Smartphone.jpg" alt="Latest Smartphone">
+                <h3>Latest Smartphone</h3>
+                <p>Stay connected with style and cutting-edge features.</p>
+                <p class="brand">Brand: Samsung</p>
+                <p class="price">$1299.99</p>
+            </a>
+            
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <a href="../html/product.html?id=3" class="card-link">
+                <img src="../images/Wireless Headphones.jpg" alt="Wireless Headphones">
+                <h3>Wireless Headphones</h3>
+                <p>Experience sound quality like never before.</p>
+                <p class="brand">Brand: Sony</p>
+                <p class="price">$119.99</p>
+            </a>
+            
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ElectroMart. All rights reserved.</p>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </footer>
+
+    <script src="../JS/scripts.js"></script>
+    <script src="../JS/product.js"></script>
+
+</body>
+</html>

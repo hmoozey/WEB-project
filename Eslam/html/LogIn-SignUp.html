@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../images/ico/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/ico/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="../images/ico/favicon-32x32.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="../images/ico/apple-touch-icon.png">
+    <link rel="icon" href="../images/ico/android-chrome-192x192.png" sizes="192x192" type="png">
+    <link rel="icon" href="../images/ico/android-chrome-512x512.png" sizes="512x512" type="png">
+
+    <title>Login & Registration | ElectroMart </title>
+    <link rel="stylesheet" type="text/css" href="../CSS/LogIn-SignUp.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html">
+                <img src="../images/logo.png" alt="Small Image" width="100" height="50" style="margin-bottom: -15px" class="image-icon" />
+            </a>
+        </h1>
+    </header>
+        <div class="wrapper">
+            <div class="form-wrapper sign-in">
+                <form action="">
+                    <h2>Login</h2>
+                    <div class="input-group">
+                        <input type="text" required>
+                        <label for="">Username</label>
+                    </div>
+                    <div class="input-group">
+
+                        <input type="password" required>
+                        <label for="">password</label>
+
+                    </div>
+                    <div class="remember">
+                        <input type="checkbox" id="cbx-signIn" style="display: none;" />
+                        <label for="cbx-signIn" class="check">
+                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                <polyline points="1 9 7 14 15 4"></polyline>
+                            </svg>
+                        </label>
+                        <span class="remember-text"> Remember me</span>
+
+                    </div>
+                    <button type="submit">Login</button>
+                    <div class="signUp-link">
+                        <p>
+                            Don't hane an account?
+                            <a href="#" class="signUpBtn-link">Sign Up</a>
+                        </p>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="form-wrapper sign-up">
+                <form action="">
+                    <h2>Sign Up</h2>
+                    <div class="input-group">
+                        <input type="text" required>
+                        <label for="">Username</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" id="phone" required pattern="^\+?\d{0,15}$" oninput="validatePhoneNumber(this)">
+                        <label for="">Number Phone</label>
+                    </div>
+                    <div class="input-group">
+
+                        <input type="password" required>
+                        <label for="">password</label>
+
+                    </div>
+                    <div class="remember">
+                        <input type="checkbox" id="cbx-signUp" style="display: none;" />
+                        <label for="cbx-signUp" class="check">
+                            <svg width="18px" height="18px" viewBox="0 0 18 18">
+                                <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                <polyline points="1 9 7 14 15 4"></polyline>
+                            </svg>
+                        </label>
+                        <span class="remember-text"> I agree to the terms & conditions</span>
+
+                    </div>
+                    <button type="submit">Sign Up</button>
+                    <div class="signUp-link">
+                        <p>
+                            Already have an account?
+                            <a href="#" class="signInBtn-link">Sign In</a>
+                        </p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <script src="../JS/LogIn-SignUp.js"></script>
+</body>
+
+</html>
